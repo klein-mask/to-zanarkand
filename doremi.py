@@ -17,7 +17,8 @@ class Doremi:
     def addFrequency(self, data):
         self.frequencies.append(self.Frequency(data))
 
-    def freq(key, doremi_str):
+    def freq(self, key, doremi_str):
+        print(doremi_str)
         return self.frequencies[key].get(doremi_str)
 
     class Frequency:

@@ -3,10 +3,11 @@ import numpy as np
 
 
 class Audio:
+
     def __init__(self):
         self.RATE = 44100
         self.BPM = 100
-        self.L1 = (60 / BPM * 4) * self.RATE
+        self.L1 = (60 / self.BPM * 4) * self.RATE
         self.L2 = self.L1 / 2
         self.L4 = self.L1 / 4
         self.L8 = self.L1 / 8
