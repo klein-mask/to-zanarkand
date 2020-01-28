@@ -1,3 +1,5 @@
+from extension import Pycolor
+import emoji
 
 class Doremi:
 
@@ -18,7 +20,7 @@ class Doremi:
         self.frequencies.append(self.Frequency(data))
 
     def freq(self, key, doremi_str):
-        print(doremi_str)
+        print(Pycolor.BLUE + doremi_str + Pycolor.END)
         return self.frequencies[key].get(doremi_str)
 
     class Frequency:
@@ -61,3 +63,4 @@ class Doremi:
                 return self.A1
             elif s == 'シ':
                 return self.B
+

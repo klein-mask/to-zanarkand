@@ -1,7 +1,9 @@
 from scraping import HeadlessScraping
 from doremi import Doremi
 from audio import Audio
-
+import time
+from extension import Pycolor
+import emoji
 
 doremi = Doremi()
 
@@ -26,6 +28,18 @@ def main():
 
 
 def play_zanarkand():
+    print(Pycolor.RED + '最後かもしれないだろ、' + Pycolor.END)
+
+    time.sleep(3)
+
+    print(Pycolor.RED + 'だから全部話しておきたいんだ。' + Pycolor.END)
+
+    print('\n')
+    print(emoji.emojize(':bell:', use_aliases=True))
+    print('\n')
+
+    time.sleep(3)
+
     audio = Audio()
 
     audio.open()
@@ -41,6 +55,10 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 2, 'ファ+'), audio.L8)
     audio.play(doremi.freq(BASE_KEY + 2, 'ソ'), audio.L2)
 
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
+
     audio.play(doremi.freq(BASE_KEY + 2, 'レ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY + 1, 'レ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY + 1, 'ファ'), audio.L8)
@@ -48,6 +66,10 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 2, 'レ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY + 2, 'ミ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY + 2, 'ファ+'), audio.L2)
+
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
 
     audio.play(doremi.freq(BASE_KEY + 1, 'シ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 1, 'シ'), audio.L4)
@@ -57,6 +79,10 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 2, 'レ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 1, 'ファ+'), audio.L2)
 
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
+
     audio.play(doremi.freq(BASE_KEY + 2, 'ミ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 2, 'ミ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 2, 'ミ'), audio.L4)
@@ -64,6 +90,10 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 2, 'レ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 2, 'ソ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 2, 'ド'), audio.L2)
+
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
 
     audio.play(doremi.freq(BASE_KEY + 1, 'ミ'), audio.L2)
     audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L8)
@@ -77,6 +107,9 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 1, 'レ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L2)
 
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
 
     audio.play(doremi.freq(BASE_KEY + 1, 'ミ'), audio.L2)
     audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L8)
@@ -90,6 +123,9 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 1, 'ラ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY + 1, 'シ'), audio.L2)
 
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
 
     audio.play(doremi.freq(BASE_KEY + 1, 'ミ'), audio.L2)
     audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L8)
@@ -103,6 +139,9 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY + 1, 'レ'), audio.L4)
     audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L2)
 
+    print('\n')
+    print(emoji.emojize(':mega:', use_aliases=True))
+    print('\n')
 
     audio.play(doremi.freq(BASE_KEY, 'ソ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY, 'ラ'), audio.L8)
