@@ -35,7 +35,6 @@ def play_zanarkand():
     print(Pycolor.RED + 'だから全部話しておきたいんだ。' + Pycolor.END)
 
     print('\n')
-    print(emoji.emojize(':bell:', use_aliases=True))
     print('\n')
 
     time.sleep(3)
