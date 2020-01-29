@@ -4,8 +4,10 @@ from audio import Audio
 import time
 from extension import Pycolor
 import emoji
+import sys
 
 doremi = Doremi()
+audio = Audio()
 
 
 def main():
@@ -24,7 +26,27 @@ def main():
             doremi.addFrequency(tmp)
             tmp = []
 
-    play_zanarkand()
+    if len(sys.argv) >= 2 and sys.argv[1] == '-t':
+        play_test()
+    else:
+        play_zanarkand()
+
+def play_test():
+
+    audio.open()
+
+    # 以下楽譜を参考に入力ベースのキーはA4とする
+    BASE_KEY = doremi.A3
+    audio.play(doremi.freq(BASE_KEY, 'ド'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'レ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'ミ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'ファ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'ソ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'ラ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY, 'シ'), audio.L4)
+    audio.play(doremi.freq(BASE_KEY + 1, 'ド'), audio.L4)
+
+    audio.close()
 
 
 def play_zanarkand():
@@ -39,11 +61,9 @@ def play_zanarkand():
 
     time.sleep(3)
 
-    audio = Audio()
-
     audio.open()
 
-    # 以下楽譜を参考に入力ベースのキーはA3とする
+    # 以下楽譜を参考に入力ベースのキーはA4とする
     BASE_KEY = doremi.A4
 
     audio.play(doremi.freq(BASE_KEY + 2, 'ミ'), audio.L8)
@@ -156,6 +176,7 @@ def play_zanarkand():
     audio.play(doremi.freq(BASE_KEY, 'レ'), audio.L8)
     audio.play(doremi.freq(BASE_KEY, 'ミ'), audio.L4)
 
+    audio.close()
 
 if __name__ == '__main__':
     main()
